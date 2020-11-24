@@ -1,0 +1,36 @@
+<div class="main-header">
+  <div
+    class="header-content"
+    fxLayout="row"
+    fxLayoutAlign="center stretch"
+    fxFill="fill"
+  >
+    <div class="center-content" fxLayout="row" fxLayoutAlign="center center">
+      <div class="page-title" fxLayout="row" fxLayoutAlign="center center">
+        <button mat-icon-button (click)="clickMenu()" class="only-mob">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <figure class="hd-mob">
+          <img [src]="dashboard" class="img-fluid" />
+        </figure>
+        <h1>Dashboard</h1>
+      </div>
+    </div>
+    <div class="action-bar" fxLayout="row" fxLayoutAlign="center stretch">
+      <div class="notific" fxLayout="row" fxLayoutAlign="center center">
+        <figure>
+          <img [src]="notifiIcon" class="img-fluid" />
+        </figure>
+      </div>
+      <div class="profile-meta" fxLayout="row" fxLayoutAlign="center center">
+        <app-user-image class="user-profile"></app-user-image>
+        <strong class="hd-mob">Subash Manual</strong>
+        <span class="hd-mob">
+          <mat-icon aria-hidden="false" aria-label="arrow"
+            >keyboard_arrow_down</mat-icon
+          >
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<section
+  class="sidenav-inner"
+  (mouseenter)="onSinenavToggle()"
+  (mouseleave)="onSinenavToggle()"
+  [@onSideNavChange]="sideNavState ? 'open' : 'close'"
+>
+  <mat-nav-list [ngClass]="sideNavState ? '' : 'icon-only'">
+    <a
+      mat-list-item
+      *ngFor="let link of links"
+      [ngClass]="{
+        'active-link': link.name === 'Dashboard'
+      }"
+    >
+      <figure class="icon">
+        <img [src]="link.icon" [alt]="link.name" class="img-fluid" />
+      </figure>
+      <span [@animateText]="linkText ? 'show' : 'hide'">{{ link.name }} </span>
+    </a>
+  </mat-nav-list>
+</section>

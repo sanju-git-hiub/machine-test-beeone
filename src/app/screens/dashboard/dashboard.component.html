@@ -1,0 +1,119 @@
+<section class="main-wrapper">
+  <div class="refer-frnd" fxLayout="row" fxLayoutAlign="end">
+    <button class="btn-grad" fxLayout="row" fxLayoutAlign="center center">
+      Refer a Friend
+      <img [src]="ReferFrnd" class="icon" />
+    </button>
+  </div>
+  <div class="page-head">
+    <div class="page-header" fxLayout="row" fxLayoutAlign="start center">
+      <div class="round"></div>
+      <h2>Portfolio</h2>
+    </div>
+  </div>
+
+  <div class="chart-sec" fxLayout="row" fxLayoutAlign="space-between stretch">
+    <div class="chart-card">
+      <div
+        class="innerContne"
+        fxLayout="row"
+        fxLayoutAlign="space-between stretch"
+      >
+        <div class="linear-graph">
+          <div class="graph-head">
+            <h6>Your Portfolio Value</h6>
+            <h4>0.00 BTC</h4>
+          </div>
+          <div class="graph">
+            <app-linechart></app-linechart>
+          </div>
+        </div>
+        <div class="circle">
+          <div class="bar">
+            <circle-progress
+              [percent]="60"
+              [radius]="100"
+              [outerStrokeWidth]="26"
+              [innerStrokeWidth]="26"
+              [space]="-26"
+              [outerStrokeColor]="'#3389fb'"
+              [innerStrokeColor]="'#ffd200'"
+              [animation]="true"
+              [animationDuration]="300"
+              [showSubtitle]="false"
+              [responsive]="true"
+            ></circle-progress>
+          </div>
+          <div class="content">
+            <h5>CCRB Mining</h5>
+            <h6>Overall Completion</h6>
+            <div
+              class="mini-content"
+              fxLayout="row"
+              fxLayoutAlign="center center"
+            >
+              <div class="count">
+                <span>Hashes Mined</span>
+                <h6>985K</h6>
+              </div>
+              <div class="count">
+                <span>CCRB Mined</span>
+                <h6>$ 2.46</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prime-card">
+      <mat-card>
+        <div class="card-holder">
+          <img [src]="UserCard" [alt]="UserPlan.name" class="img-fluid" />
+        </div>
+        <div class="content">
+          <ul class="planDetails">
+            <li>
+              <span>Membership :</span>
+              <span class="membership">{{ UserPlan.name }}</span>
+            </li>
+            <li>
+              <span>Trading Account :</span>
+              <span class="op">{{ UserPlan.trAc }} CCRB</span>
+            </li>
+            <li>
+              <span>Mining Balance :</span>
+              <span class="op">{{ UserPlan.miningBal }} CCRB</span>
+            </li>
+            <li>
+              <span>Mining Pending :</span>
+              <span class="op">{{ UserPlan.miningPend }} CCRB</span>
+            </li>
+            <li>
+              <span>Total </span>
+              <span class="op">{{ UserPlan.total }} CCRB</span>
+            </li>
+          </ul>
+        </div>
+        <div class="action-sec"><button class="btn-grad">Upgrade</button></div>
+      </mat-card>
+    </div>
+  </div>
+  <div
+    class="count-cards"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    *ngIf="counts.length > 0"
+  >
+    <app-count-card
+      *ngFor="let data of counts"
+      [count]="data"
+      class="count-card"
+    ></app-count-card>
+    <div class="viewmore hd-mob">
+      <figure>
+        <img [src]="ViewMore" alt="View More" class="img-fluid" />
+      </figure>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+body
+    position: relative
+    overflow-x: hidden  
+    font-family: 'Poppins', sans-serif  
+
+.main-wrapper
+    max-width: 980px
+    width: 100%  
+    margin: 0 auto  
+
+h1, h2, h3, h4, h5, h6, figure, ul
+    margin: 0 
+    padding: 0  
+
+.img-fluid
+    width: 100%
+    max-width: 100%
+
+.btn-grad 
+    all: unset
+    background-image: linear-gradient(to right, #3a6cf4 0%, #0ec3f4  100%)
+    padding: 0 30px
+    text-align: center
+    transition: 0.5s
+    background-size: 150% auto
+    color: white        
+    box-shadow: 0 0 20px #eee
+    border-radius: 50px
+    display: block
+    line-height: 40px
+    cursor: pointer
+    font-family: 'Poppins', sans-serif  
+    font-size: 13px
+    .icon
+        margin-left: 10px
+        width: 18px
+        height: 18px
+    &:hover
+        background-position: right center
+        color: #fff
+        text-decoration: none
+
+
+
+.hd-mob
+    @media screen and ( max-width: 768px )
+        display: none !important
+
+
+.only-mob
+    display: none !important
+    @media screen and ( max-width: 768px )
+        display: block !important 
+
+.apexcharts-canvas
+    width: 100% !important
+.apexcharts-text tspan
+    font-size: 9px
+    font-family: 'Poppins', sans-serif  
+    color: #bec2ce  
