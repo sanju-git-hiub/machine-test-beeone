@@ -25,29 +25,33 @@ export type ChartOptions = {
   styleUrls: ['./linechart.component.sass']
 })
 export class LinechartComponent implements OnInit {
-
-  @ViewChild("chart") chart: ChartComponent;
+  @ViewChild("chart")
+  chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() {
     this.chartOptions = {
       series: [
         {
           name: "Porfolio Values",
-          data: [10, 41, 35, 51, 49, 62, 69]
+          data: [10, 21, 60, 51, 65, 72, 89]
         }
       ],
-      chart: {
+      chart: {    
         height: 250,
         type: "line",
         zoom: {
           enabled: false
-        }
+        },
+        toolbar: {
+          show: false
+        },
       },
       dataLabels: {
         enabled: false
       },
       stroke: {
-        curve: "straight"
+        curve: "smooth",
+        width: 1
       },
       title: {
         text: "",

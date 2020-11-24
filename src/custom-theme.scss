@@ -34,7 +34,7 @@ $beeoneTest-theme: mat-light-theme((
 @include angular-material-theme($beeoneTest-theme);
 
 
-html, body { height: 100%; }
+html, body { height: 100%; scroll-behavior: smooth;}
 body { margin: 0; font-family: 'Poppins', sans-serif; }
 .mat-drawer-content{
   @media screen and ( max-width: 768px ){
