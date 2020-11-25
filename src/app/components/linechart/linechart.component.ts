@@ -13,7 +13,7 @@ export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   xaxis: ApexXAxis;
-  dataLabels: ApexDataLabels;
+  dataLabels: ApexDataLabels; 
   grid: ApexGrid;
   stroke: ApexStroke;
   title: ApexTitleSubtitle;
@@ -25,8 +25,7 @@ export type ChartOptions = {
   styleUrls: ['./linechart.component.sass']
 })
 export class LinechartComponent implements OnInit {
-  @ViewChild("chart")
-  chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() {
     this.chartOptions = {
