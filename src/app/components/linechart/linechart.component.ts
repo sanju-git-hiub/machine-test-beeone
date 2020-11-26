@@ -25,7 +25,7 @@ export type ChartOptions = {
   styleUrls: ['./linechart.component.sass']
 })
 export class LinechartComponent implements OnInit {
-  @ViewChild("chart") chart: ChartComponent;
+  public chart: ChartComponent = new ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   constructor() {
     this.chartOptions = {
